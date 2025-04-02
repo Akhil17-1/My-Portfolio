@@ -1,0 +1,175 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0d0d0d;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Header Styling for Desktop */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Tabs (Desktop) */
+.nav-tabs {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-tabs .tab {
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.nav-tabs .tab:hover,
+.nav-tabs .tab.active {
+  background: #333;
+}
+
+/* Mobile Hamburger Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Navigation Slider */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background: #1a1a1a;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.mobile-nav.open {
+  left: 0;
+}
+
+.mobile-close-btn {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.mobile-nav-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+.mobile-nav-tabs a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.mobile-nav-tabs a:hover,
+.mobile-nav-tabs a.active {
+  background: #333;
+}
+
+/* Content Container */
+.content-container {
+  padding: 20px;
+}
+
+/* Footer with Social Icons */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+.footer .social-icons {
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer .social-icons a {
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #888;
+}
+
+/* Responsive Styling for Mobile and Smaller Devices */
+@media (max-width: 768px) {
+  .nav-tabs {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .header {
+    padding: 10px 10px;
+  }
+  .logo .site-name {
+    font-size: 1.2rem;
+  }
+}

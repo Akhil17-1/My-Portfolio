@@ -1,0 +1,19 @@
+<section class="page-content">
+  <h1>Insights & Suggestions</h1>
+  <p>Share your insights with me!</p>
+  <form action="/submit_insight" method="POST">
+    <textarea name="insight" placeholder="Enter your insight here..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <hr>
+  <h2>Previous Insights</h2>
+  {% if insights %}
+    <ul>
+      {% for insight in insights %}
+        <li>{{ insight[0] }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No insights yet. Be the first to share!</p>
+  {% endif %}
+</section>
