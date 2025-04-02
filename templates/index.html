@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Cyber Portfolio</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
 </head>
 <body>
   <header class="header">
     <div class="logo">
       <a href="/" class="home-link">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo-img">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo-img" />
         <span class="site-name">Akhil's Portfolio</span>
       </a>
     </div>
@@ -28,7 +36,7 @@
       <a href="#" data-page="resume" class="tab">Resume</a>
       <a href="#" data-page="insights" class="tab">Insights</a>
     </nav>
-    <!-- Hamburger Menu Button for Mobile -->
+    <!-- Hamburger Menu for Mobile -->
     <button id="mobile-menu-btn" class="mobile-menu-btn">
       <i class="fas fa-bars"></i>
     </button>
@@ -49,9 +57,11 @@
     </nav>
   </div>
 
+  <!-- Main Content Container -->
   <main id="content" class="content-container">
-    <!-- Content loads here asynchronously -->
+    <!-- Dynamic content is loaded here -->
   </main>
+
   <footer class="footer">
     <div class="social-icons">
       <a href="https://www.instagram.com/akhil_174_/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -61,7 +71,10 @@
     </div>
     <p>&copy; AKHIL. All rights reserved.</p>
   </footer>
-</footer>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+  <!-- Include JS Files (order matters) -->
+  <script src="{{ url_for('static', filename='js/phrases.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/cipher.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
